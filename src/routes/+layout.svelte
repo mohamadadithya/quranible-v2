@@ -17,6 +17,9 @@
 </main>
 
 <style>
+    :global(:root) {
+        scroll-behavior: smooth;
+    }
     :global(body) {
         background: #F1F5F9;
     }

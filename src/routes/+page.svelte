@@ -2,7 +2,6 @@
     import SurahCard from "../components/SurahCard.svelte";
 
     export let data;
-    console.log(data.surahs);
     let keyword = '';
     let surahs = [];
     $: if(keyword) {
