@@ -2,12 +2,13 @@
     import SurahCard from "../components/SurahCard.svelte";
 
     export let data;
+    console.log(data.surahs);
     let keyword = '';
     let surahs = [];
     $: if(keyword) {
-        surahs = surahs.filter(surah => surah.nama_latin.toLowerCase().includes(keyword.toLowerCase()));
+        surahs = surahs.filter(surah => surah.name.toLowerCase().includes(keyword.toLowerCase()));
     } else {
-        surahs = [...data.surahs];
+        surahs = [...data.surahs.data];
     }
 </script>
 <svelte:head>
