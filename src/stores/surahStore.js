@@ -1,3 +1,3 @@
-import { writable } from "svelte/store";
+import { writable } from "svelte-local-storage-store";
 
-export let ayahs = writable([]);
+export let ayahs = writable('ayahs', []);

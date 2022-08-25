@@ -1,4 +1,5 @@
 <script>
+	import { ayahs } from './../../../stores/surahStore.js';
 	import { onMount } from 'svelte';
 	import Ayat from '../../../components/Ayat.svelte';
 	import SurahCard from '../../../components/SurahCard.svelte';
@@ -8,6 +9,7 @@
 	let surah = data.surah;
 	let nextSurah = data.nextSurah;
 	let prevSurah = data.prevSurah;
+	let lastReadAyah, scrollY;
 
 	let audio;
 	onMount(() => {
@@ -32,17 +34,24 @@
 		prevSurah = data.prevSurah;
 		nextSurah = data.nextSurah;
 	}
+
+	$: lastReadAyah = $ayahs.find((ayah) => ayah.surahId == surah.number);
 </script>
 
 <svelte:head>
 	<title>Surah {surah.name} | Quranible</title>
 </svelte:head>
 
+<svelte:window bind:scrollY />
+
 <section id="surah" class="pb-10 pt-5">
 	{#if surah.nomor != 1}
 		<h1 class="text-center text-4xl md:text-5xl mb-14 md:mb-20 arab-font">
 			بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 		</h1>
+	{/if}
+	{#if lastReadAyah}
+		<a href="#{lastReadAyah.id}">Terakhir dibaca ayat {lastReadAyah.id}</a>
 	{/if}
 	{#each surah.ayahs as ayah}
 		<Ayat {ayah} {surah} on:click={() => playSurah(ayah.audio, ayah.verseId)} />
@@ -64,3 +73,14 @@
 		</div>
 	</div>
 </section>
+
+<button
+	id="scroll-top"
+	on:click={() => (scrollY = 0)}
+	title="Scroll to Top"
+	class="fixed bottom-8 right-4 {scrollY > 500
+		? 'opacity-100'
+		: 'opacity-0 pointer-events-none'} transition-opacity duration-300 px-3 py-2.5 bg-slate-800 rounded-full text-white"
+>
+	<i class="far fa-fw fa-chevron-up" />
+</button>

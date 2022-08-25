@@ -40,22 +40,19 @@
 					<div class="h-0.5 bg-slate-600 w-full ml-3" />
 				</li>
 				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/">Al-Quran</a>
+					<a href="/"><i class="far fa-fw fa-book" /> Al-Quran</a>
 				</li>
 				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/">Doa Harian</a>
+					<a href="/"><i class="far fa-fw fa-newspaper" /> Doa Harian</a>
 				</li>
 				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/">Waktu Sholat</a>
+					<a href="/"><i class="far fa-fw fa-pray" /> Niat-Niat Sholat</a>
 				</li>
 				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/">Niat-Niat Sholat</a>
+					<a href="/"><i class="far fa-fw fa-info-circle" /> Tentang</a>
 				</li>
 				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/">Tentang</a>
-				</li>
-				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/">Donasi</a>
+					<a href="/"><i class="far fa-fw fa-donate" /> Donasi</a>
 				</li>
 				<li class="mt-5 text-xs">
 					<p>
