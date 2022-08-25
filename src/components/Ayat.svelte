@@ -5,22 +5,22 @@
 	export let ayah, surah;
 
 	const saveAyah = () => {
-		ayahs.update((currentAyahs) => {
-			let savedAyah = {
-				surahId: surah.number,
-				id: ayah.verseId,
-				text: ayah.ayahText
-			};
-
-			let filteredAyah = currentAyahs.filter(
-				(ayah) => ayah.surahId == surah.number && ayah.id != savedAyah.id
-			);
-			currentAyahs = [...filteredAyah, savedAyah];
+		let savedAyah = {
+			surahId: surah.number,
+			id: ayah.verseId,
+			text: ayah.ayahText
+		};
+		ayahs.update(currentAyahs => {
+			if(savedAyah.surahId == surah.number) {
+				let filteredAyahs = currentAyahs.filter(ayah => ayah.surahId != savedAyah.surahId);
+				currentAyahs = [...filteredAyahs, savedAyah];
+			} else {
+				currentAyahs = [...currentAyahs, savedAyah];
+			}
 			return currentAyahs;
 		});
+		console.log($ayahs);
 	};
-
-	$: console.log($ayahs);
 </script>
 
 <div id="ayat" class="py-8 mb-10 border-b-2 border-gray-300">
