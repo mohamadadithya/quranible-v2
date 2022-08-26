@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
+      },
+      lineHeight: {
+        'extra-loose': '2.5'
       }
     }
   },

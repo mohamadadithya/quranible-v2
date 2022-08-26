@@ -21,7 +21,9 @@
 					filteredAyahs = currentAyahs.filter((ayah) => ayah.surahId != sameAyah.surahId);
 					savedAyah = {};
 				} else {
-					filteredAyahs = currentAyahs.filter((ayah) => ayah.surahId != savedAyah.surahId && Object.keys(ayah).length > 0);
+					filteredAyahs = currentAyahs.filter(
+						(ayah) => ayah.surahId != savedAyah.surahId && Object.keys(ayah).length > 0
+					);
 				}
 				currentAyahs = [...filteredAyahs, savedAyah];
 			} else {
@@ -37,7 +39,9 @@
 </script>
 
 <div id={ayah.verseId} class="py-8 mb-10 border-b-2 border-gray-300">
-	<h3 class="text-3xl md:text-4xl mb-14 text-right arab-font">{ayah.ayahText}</h3>
+	<h3 class="text-3xl md:text-4xl mb-14 text-right arab-font leading-extra-loose">
+		{ayah.ayahText}
+	</h3>
 	<p class="text-sm mb-2">{ayah.verseId}. {ayah.readText}</p>
 	<p class="text-gray-500">{ayah.indoText}</p>
 	<div id="actions" class="flex items-center mt-5 text-xl">
@@ -52,9 +56,3 @@
 		>
 	</div>
 </div>
-
-<style>
-	h3 {
-		line-height: 2.5;
-	}
-</style>

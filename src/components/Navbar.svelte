@@ -1,5 +1,34 @@
 <script>
+	import NavList from './NavList.svelte';
+
 	let isOpen = false;
+	const links = [
+		{
+			url: '/',
+			name: 'Al-Quran',
+			icon: 'fa-book'
+		},
+		{
+			url: '/doa-harian',
+			name: 'Doa Harian',
+			icon: 'fa-newspaper'
+		},
+		{
+			url: '/niat-niat-sholat',
+			name: 'Niat-Niat Sholat',
+			icon: 'fa-pray'
+		},
+		{
+			url: '/tentang',
+			name: 'Tentang',
+			icon: 'fa-info-circle'
+		},
+		{
+			url: 'https://saweria.com',
+			name: 'Donasi',
+			icon: 'fa-donate'
+		}
+	];
 </script>
 
 <header
@@ -32,36 +61,24 @@
 		<nav
 			class="h-screen w-3/4 md:w-1/4 py-10 fixed bg-slate-800 left-0 container mx-auto px-5 -translate-x-full opacity-0 transition-all duration-500 {isOpen
 				? 'translate-x-0 opacity-100'
-				: ''}"
+				: ''} flex flex-col justify-between"
 		>
-			<ul>
-				<li class="mb-4 font-semibold text-xl flex items-center">
+			<div>
+				<div class="mb-4 font-semibold text-xl flex items-center">
 					<p>Menu</p>
 					<div class="h-0.5 bg-slate-600 w-full ml-3" />
-				</li>
-				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/"><i class="far fa-fw fa-book" /> Al-Quran</a>
-				</li>
-				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/"><i class="far fa-fw fa-newspaper" /> Doa Harian</a>
-				</li>
-				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/"><i class="far fa-fw fa-pray" /> Niat-Niat Sholat</a>
-				</li>
-				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/"><i class="far fa-fw fa-info-circle" /> Tentang</a>
-				</li>
-				<li class="border-b-2 border-slate-600 py-5">
-					<a href="/"><i class="far fa-fw fa-donate" /> Donasi</a>
-				</li>
-				<li class="mt-5 text-xs">
-					<p>
-						&copy; 2022 <a href="https://m-adithya.my.id" aria-label="Web's author" title="Author"
-							>Mohamad Adithya</a
-						>
-					</p>
-				</li>
-			</ul>
+				</div>
+				<ul>
+					{#each links as link}
+						<NavList name={link.name} url={link.url} icon={link.icon} />
+					{/each}
+				</ul>
+			</div>
+			<p class="text-xs mb-6">
+				&copy; 2022 <a href="https://m-adithya.my.id" aria-label="Web's author" title="Author"
+					>Mohamad Adithya</a
+				>
+			</p>
 		</nav>
 	</div>
 </header>
