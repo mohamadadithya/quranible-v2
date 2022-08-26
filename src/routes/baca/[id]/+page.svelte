@@ -39,9 +39,7 @@
 	$: lastReadAyah = $ayahs.find((ayah) => ayah.surahId == surah.number);
 </script>
 
-<svelte:head>
-	<Seo title="Surah {surah.name} | Quranible" keywords="surah {surah.name}, surah ke-{surah.number} dalam al-quran" />
-</svelte:head>
+<Seo title="Surah {surah.name} | Quranible" keywords="surah {surah.name}, surah ke-{surah.number} dalam al-quran" />
 
 <svelte:window bind:scrollY />
 

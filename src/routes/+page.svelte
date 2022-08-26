@@ -12,9 +12,7 @@
 	}
 </script>
 
-<svelte:head>
-	<Seo />
-</svelte:head>
+<Seo />
 
 <section id="home">
 	<div class="flex items-center shadow-lg p-4 rounded-xl bg-white">
