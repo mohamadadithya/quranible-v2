@@ -21,13 +21,6 @@ npm install
 npm run dev
 ```
 
-## Authors
-
-Contributors names and contact info
-
-Mohamad Adithya  
-[@MohamadAdithya](https://twitter.com/mohamadadithya)
-
 ## Version History
 
 * 0.1
