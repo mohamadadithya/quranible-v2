@@ -4,6 +4,7 @@
 	import Ayat from '../../../components/Ayat.svelte';
 	import SurahCard from '../../../components/SurahCard.svelte';
 	import { audioSource, isPlaying, id } from '../../../stores/audioStore';
+	import Seo from '../../../components/SEO.svelte';
 
 	export let data;
 	let surah = data.surah;
@@ -39,7 +40,7 @@
 </script>
 
 <svelte:head>
-	<title>Surah {surah.name} | Quranible</title>
+	<Seo title="Surah {surah.name} | Quranible" keywords="surah {surah.name}, surah ke-{surah.number} dalam al-quran" />
 </svelte:head>
 
 <svelte:window bind:scrollY />

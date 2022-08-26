@@ -1,4 +1,5 @@
 <script>
+	import Seo from '../components/SEO.svelte';
 	import SurahCard from '../components/SurahCard.svelte';
 
 	export let data;
@@ -12,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>Quranible</title>
+	<Seo />
 </svelte:head>
 
 <section id="home">
