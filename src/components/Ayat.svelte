@@ -18,14 +18,10 @@
 					(singleAyah) => singleAyah.id == savedAyah.id && singleAyah.surahId == savedAyah.surahId
 				);
 				if (sameAyah) {
-					console.log(true);
-					filteredAyahs = currentAyahs.filter(
-						(ayah) => ayah.id != sameAyah.id && ayah.surahId != sameAyah.surahId
-					);
+					filteredAyahs = currentAyahs.filter((ayah) => ayah.surahId != sameAyah.surahId);
 					savedAyah = {};
 				} else {
-					console.log(false);
-					filteredAyahs = currentAyahs.filter((ayah) => ayah.surahId != savedAyah.surahId);
+					filteredAyahs = currentAyahs.filter((ayah) => ayah.surahId != savedAyah.surahId && Object.keys(ayah).length > 0);
 				}
 				currentAyahs = [...filteredAyahs, savedAyah];
 			} else {
