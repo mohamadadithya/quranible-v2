@@ -21,6 +21,13 @@ npm install
 npm run dev
 ```
 
+## Features
+* Bookmark ayah
+* Audio included
+* Settings
+  * Theme
+  * Show/Hide transliteration
+
 ## Version History
 
 * 0.1
