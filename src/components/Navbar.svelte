@@ -1,4 +1,5 @@
 <script>
+	import { ayahs } from '../stores/surahStore';
 	import NavList from './NavList.svelte';
 
 	let isOpen = false;
@@ -81,4 +82,5 @@
 			</p>
 		</nav>
 	</div>
+	<a href="/" class="absolute p-2 md:p-3 text-center bg-slate-200 -bottom-10 md:-bottom-12 text-slate-800 left-0">Terakhir dibaca ayat</a>
 </header>

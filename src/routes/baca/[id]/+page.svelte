@@ -1,5 +1,4 @@
 <script>
-	import { ayahs } from './../../../stores/surahStore.js';
 	import { onMount } from 'svelte';
 	import Ayat from '../../../components/Ayat.svelte';
 	import SurahCard from '../../../components/SurahCard.svelte';
@@ -10,7 +9,7 @@
 	let surah = data.surah;
 	let nextSurah = data.nextSurah;
 	let prevSurah = data.prevSurah;
-	let lastReadAyah, scrollY;
+	let scrollY;
 
 	let audio;
 	onMount(() => {
@@ -35,8 +34,6 @@
 		prevSurah = data.prevSurah;
 		nextSurah = data.nextSurah;
 	}
-
-	$: lastReadAyah = $ayahs.find((ayah) => ayah.surahId == surah.number);
 </script>
 
 <Seo title="Surah {surah.name} | Quranible" keywords="surah {surah.name}, surah ke-{surah.number} dalam al-quran" />
@@ -48,9 +45,6 @@
 		<h1 class="text-center text-4xl md:text-5xl mb-14 md:mb-20 arab-font">
 			بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 		</h1>
-	{/if}
-	{#if lastReadAyah}
-		<a href="#{lastReadAyah.id}">Terakhir dibaca ayat {lastReadAyah.id}</a>
 	{/if}
 	{#each surah.ayahs as ayah}
 		<Ayat {ayah} {surah} on:click={() => playSurah(ayah.audio, ayah.verseId)} />
