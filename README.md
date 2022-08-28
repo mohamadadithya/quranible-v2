@@ -26,7 +26,8 @@ npm run dev
 * Audio included
 * Settings
   * Theme
-  * Show/Hide transliteration
+  * Show/Hide Transliteration
+  * Audio Auto Scroll
 
 ## Version History
 
