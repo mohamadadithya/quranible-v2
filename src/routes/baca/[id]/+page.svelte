@@ -36,11 +36,14 @@
 	}
 </script>
 
-<Seo title="Surah {surah.name} | Quranible" keywords="surah {surah.name}, surah ke-{surah.number} dalam al-quran" />
+<Seo
+	title="Surah {surah.name} | Quranible"
+	keywords="surah {surah.name}, surah ke-{surah.number} dalam al-quran"
+/>
 
 <svelte:window bind:scrollY />
 
-<section id="surah" class="pb-10 pt-5">
+<section id="surah" class="pt-5">
 	{#if surah.nomor != 1}
 		<h1 class="text-center text-4xl md:text-5xl mb-14 md:mb-20 arab-font">
 			بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ

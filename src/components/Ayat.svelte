@@ -8,6 +8,7 @@
 	const saveAyah = () => {
 		let savedAyah = {
 			surahId: surah.number,
+			name: surah.name,
 			id: ayah.verseId,
 			text: ayah.ayahText
 		};
@@ -39,7 +40,7 @@
 </script>
 
 <div id={ayah.verseId} class="py-8 mb-10 border-b-2 border-gray-300">
-	<h3 class="text-3xl md:text-4xl mb-14 text-right arab-font leading-extra-loose">
+	<h3 class="text-3xl md:text-4xl mb-14 text-right arab-font leading-extra">
 		{ayah.ayahText}
 	</h3>
 	<p class="text-sm mb-2">{ayah.verseId}. {ayah.readText}</p>

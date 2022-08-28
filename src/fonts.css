@@ -8,3 +8,7 @@
 .arab-font {
   font-family: 'LPMQ';
 }
+
+.leading-extra {
+  line-height: 2.5;
+}

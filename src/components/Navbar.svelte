@@ -1,5 +1,4 @@
 <script>
-	import { ayahs } from '../stores/surahStore';
 	import NavList from './NavList.svelte';
 
 	let isOpen = false;
@@ -15,19 +14,19 @@
 			icon: 'fa-newspaper'
 		},
 		{
-			url: '/niat-niat-sholat',
-			name: 'Niat-Niat Sholat',
+			url: '/niat-sholat',
+			name: 'Niat Sholat',
 			icon: 'fa-pray'
+		},
+		{
+			url: '/asmaul-husna',
+			name: 'Asmaul Husna',
+			icon: 'fa-signature'
 		},
 		{
 			url: '/tentang',
 			name: 'Tentang',
 			icon: 'fa-info-circle'
-		},
-		{
-			url: 'https://saweria.com',
-			name: 'Donasi',
-			icon: 'fa-donate'
 		}
 	];
 </script>
@@ -40,23 +39,42 @@
 			<li>
 				<button
 					type="button"
-					class="text-xl"
+					class="text-xl mr-2"
 					aria-label="Menu"
 					title="Menu"
 					on:click={() => (isOpen = !isOpen)}
 				>
 					<i class="far fa-fw fa-bars" />
 				</button>
-			</li>
-			<li>
-				<a href="/" title="Quranible" aria-label="Quranible's logo" class="text-2xl font-bold"
-					>Quranible</a
+				<a
+					sveltekit:prefetch
+					href="/"
+					title="Quranible"
+					aria-label="Logo"
+					class="text-2xl font-bold">Quranible</a
 				>
 			</li>
 			<li>
-				<button type="button" aria-label="Settings" class="text-xl" title="Settings">
+				<a
+					sveltekit:prefetch
+					href="/penanda-surah"
+					role="button"
+					aria-label="Bookmarks"
+					class="text-xl"
+					title="Penanda Surah"
+				>
+					<i class="far fa-fw fa-bookmark" />
+				</a>
+				<a
+					sveltekit:prefetch
+					href="/pengaturan"
+					role="button"
+					aria-label="Settings"
+					class="text-xl"
+					title="Pengaturan"
+				>
 					<i class="far fa-fw fa-cog" />
-				</button>
+				</a>
 			</li>
 		</ul>
 		<nav
@@ -71,8 +89,18 @@
 				</div>
 				<ul>
 					{#each links as link}
-						<NavList name={link.name} url={link.url} icon={link.icon} />
+						<NavList
+							on:click={() => (isOpen = false)}
+							name={link.name}
+							url={link.url}
+							icon={link.icon}
+						/>
 					{/each}
+					<li class="border-b-2 border-slate-600 py-5">
+						<a href="https://saweria.co/mohamadadithya" target="_blank" title="Donasi"
+							><i class="far fa-fw fa-donate" /> Donasi</a
+						>
+					</li>
 				</ul>
 			</div>
 			<p class="text-xs mb-6">
@@ -82,5 +110,4 @@
 			</p>
 		</nav>
 	</div>
-	<a href="/" class="absolute p-2 md:p-3 text-center bg-slate-200 -bottom-10 md:-bottom-12 text-slate-800 left-0">Terakhir dibaca ayat</a>
 </header>

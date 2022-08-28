@@ -1,5 +1,6 @@
 <script>
-	import DailyPrayer from '../../components/DailyPrayer.svelte';
+	import Heading from '../../components/Heading.svelte';
+	import List from '../../components/List.svelte';
 	import Seo from '../../components/SEO.svelte';
 	export let data;
 
@@ -8,12 +9,9 @@
 
 <Seo title="Doa Harian | Quranible" />
 
-<section class="pb-10">
-	<div class="flex items-center mb-5">
-		<h1 class="text-3xl font-semibold">Doa Harian</h1>
-		<div class="w-full h-0.5 bg-gray-300 flex-1 ml-3" />
-	</div>
+<section>
+	<Heading title="Doa Harian" />
 	{#each dailyPrayers as prayer, index}
-		<DailyPrayer {prayer} {index} />
+		<List url="/doa-harian/{prayer.id}" name={prayer.doa} {index} />
 	{/each}
 </section>

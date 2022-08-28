@@ -20,7 +20,7 @@
 
 <Navbar />
 <main
-	class="font-poppins container mx-auto md:px-5 lg:px-24 px-5 pt-24 text-slate-800 bg-slate-100"
+	class="font-poppins accent-slate-800 container mx-auto md:px-5 lg:px-24 px-5 pt-24 pb-10 text-slate-800 bg-slate-100"
 >
 	<slot />
 </main>
