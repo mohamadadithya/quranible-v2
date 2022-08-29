@@ -22,9 +22,9 @@ npm run dev
 ```
 
 ## Features
-* Bookmark ayah
-* Audio included
-* Settings
+- [x] Bookmark ayah
+- [x] Audio included
+- [ ] Settings
   * Theme
   * Show/Hide Transliteration
   * Audio Auto Scroll
