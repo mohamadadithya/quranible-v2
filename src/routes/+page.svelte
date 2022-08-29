@@ -14,8 +14,10 @@
 
 <Seo />
 
-<section id="home">
-	<div class="flex items-center shadow-lg p-4 rounded-xl bg-white">
+<section id="home" class="min-h-screen">
+	<div
+		class="flex items-center border-2 border-white dark:border-slate-800 dark:focus-within:border-slate-700 focus-within:border-slate-200 shadow-lg p-4 rounded-xl bg-white dark:bg-slate-800 dark:text-slate-300"
+	>
 		<i class="far fa-fw fa-search mr-3 text-gray-400" />
 		<input
 			type="text"

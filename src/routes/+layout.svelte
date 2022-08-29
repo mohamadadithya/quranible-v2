@@ -1,4 +1,5 @@
 <script>
+	import { themeChoice } from './../stores/SettingStore.js';
 	import '../app.css';
 	import '../fonts.css';
 	import Navbar from '../components/Navbar.svelte';
@@ -18,19 +19,18 @@
 	/>
 </svelte:head>
 
-<Navbar />
-<main
-	class="font-poppins accent-slate-800 container mx-auto md:px-5 lg:px-24 px-5 pt-24 pb-10 text-slate-800 bg-slate-100"
->
-	<slot />
+<main class="font-poppins {$themeChoice}">
+	<Navbar />
+	<div
+		class="accent-slate-800 dark:accent-slate-700 md:px-5 lg:px-24 px-5 pt-24 pb-10 text-slate-800 bg-slate-100 dark:bg-slate-900"
+	>
+		<slot />
+	</div>
 </main>
 
 <style>
 	:global(:root) {
 		scroll-padding-top: 80px;
 		scroll-behavior: smooth;
-	}
-	:global(body) {
-		background: #f1f5f9;
 	}
 </style>

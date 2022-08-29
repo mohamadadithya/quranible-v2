@@ -14,7 +14,7 @@
 
 <Seo title="{prayer.doa} | Quranible" />
 
-<section>
+<section class="dark:text-slate-300">
 	<h1 class="text-2xl md:text-3xl font-bold mb-10 capitalize">{prayer.doa}</h1>
 	<p class="text-3xl md:text-4xl arab-font text-right mb-10 leading-extra">{prayer.ayat}</p>
 	<p class="text-gray-500 text-sm mb-2">{prayer.latin}</p>

@@ -14,7 +14,7 @@
 
 <Seo title="{intention.name} | Quranible" />
 
-<section>
+<section class="dark:text-slate-300">
 	<h1 class="text-2xl md:text-3xl font-bold mb-10 capitalize">{intention.name}</h1>
 	<p class="text-3xl md:text-4xl arab-font text-right mb-10 leading-extra">{intention.arab}</p>
 	<p class="text-gray-500 text-sm mb-2">{intention.latin}</p>

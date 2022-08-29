@@ -9,7 +9,7 @@
 
 <Seo title="Penanda Surah | Quranible" />
 
-<section>
+<section class="min-h-screen">
 	<Heading title="Penanda Surah" />
 	{#if filteredAyahs.length}
 		{#each filteredAyahs as ayah, index}

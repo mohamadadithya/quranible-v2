@@ -32,7 +32,7 @@
 </script>
 
 <header
-	class="py-4 bg-slate-800 text-white font-poppins fixed transition-all duration-500 w-full z-10"
+	class="py-4 bg-slate-800 text-white dark:text-slate-300 font-poppins fixed transition-all duration-500 w-full z-10"
 >
 	<div class="px-5">
 		<ul class="flex justify-between items-center">
@@ -85,7 +85,7 @@
 			<div>
 				<div class="mb-4 font-semibold text-xl flex items-center">
 					<p>Menu</p>
-					<div class="h-0.5 bg-slate-600 w-full ml-3" />
+					<div class="h-0.5 bg-slate-600 dark:bg-slate-500 w-full ml-3" />
 				</div>
 				<ul>
 					{#each links as link}
