@@ -1,10 +1,11 @@
 <script>
 	import Heading from '../../components/Heading.svelte';
 	import Seo from '../../components/SEO.svelte';
-	import { themeChoice, transliterationChoice } from '../../stores/SettingStore';
+	import { themeChoice, transliterationChoice, autoScrollChoice } from '../../stores/SettingStore';
 
 	let themeValue = $themeChoice;
 	let transliterationValue = $transliterationChoice;
+	let autoScrollValue = $autoScrollChoice;
 
 	const themes = [
 		{
@@ -79,11 +80,11 @@
 	<h5 class="mb-4 text-xl font-medium mt-8">Otomatis Scroll Audio</h5>
 	<div id="auto-scroll-radios">
 		<label for="yes" class="mr-3">
-			<input type="radio" name="auto_scroll" id="yes" class="mr-1" checked />
+			<input type="radio" name="auto_scroll" id="yes" class="mr-1" bind:group={autoScrollValue} value={1} on:click={() => autoScrollChoice.set(1)} />
 			Ya
 		</label>
 		<label for="no">
-			<input type="radio" name="auto_scroll" id="no" class="mr-1" />
+			<input type="radio" name="auto_scroll" id="no" class="mr-1" bind:group={autoScrollValue} value={0} on:click={() => autoScrollChoice.set(0)} />
 			Tidak
 		</label>
 	</div>

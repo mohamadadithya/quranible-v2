@@ -4,6 +4,7 @@
 	import SurahCard from '../../../components/SurahCard.svelte';
 	import { audioSource, isPlaying, id } from '../../../stores/audioStore';
 	import Seo from '../../../components/SEO.svelte';
+	import { autoScrollChoice } from '../../../stores/SettingStore';
 
 	export let data;
 	let surah = data.surah;
@@ -18,7 +19,9 @@
 			const nextSurah = surah.ayahs.find((ayah) => ayah.verseId == $id);
 			if (nextSurah) {
 				playSurah(nextSurah.audio, nextSurah.verseId);
-				window.location.hash = `#${$id}`;
+				if($autoScrollChoice) {
+					window.location.hash = `#${$id}`;
+				}
 			}
 		};
 	});

@@ -16,6 +16,6 @@
 			<List url="/baca/{ayah.surahId}#{ayah.id}" name={ayah.name} ayahId={ayah.id} {index} />
 		{/each}
 	{:else}
-		<p>Belum ada penanda surah...</p>
+		<p class="dark:text-slate-300">Belum ada penanda surah...</p>
 	{/if}
 </section>
