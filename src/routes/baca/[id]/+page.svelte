@@ -18,6 +18,7 @@
 			const nextSurah = surah.ayahs.find((ayah) => ayah.verseId == $id);
 			if (nextSurah) {
 				playSurah(nextSurah.audio, nextSurah.verseId);
+				window.location.hash = `#${$id}`;
 			}
 		};
 	});
