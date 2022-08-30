@@ -7,7 +7,7 @@
 	const dailyPrayers = data.dailyPrayers;
 </script>
 
-<Seo title="Doa Harian | Quranible" />
+<Seo title="Doa Harian | Quranible" description="Kumpulan doa-doa harian lengkap dengan arti" keywords="doa harian, doa-doa" />
 
 <section>
 	<Heading title="Doa Harian" />

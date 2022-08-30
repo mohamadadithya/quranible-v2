@@ -6,7 +6,7 @@
 	let intentions = data.intentions;
 </script>
 
-<SEO title="Niat Sholat | Quranible" />
+<SEO title="Niat Sholat | Quranible" description="Kumpulan niat-niat sholat lengkap dengan arti" keywords="niat, niat-niat sholat, niat sholat" />
 
 <section>
 	<Heading title="Niat Sholat" />

@@ -6,7 +6,7 @@
 	const goodNames = data.goodNames;
 </script>
 
-<Seo title="Asmaul Husna | Quranible" />
+<Seo title="Asmaul Husna | Quranible" keywords="asmaul husna, asmaul-husna, nama nama Allah" />
 
 <section class="dark:text-slate-300">
 	<Heading title="Asmaul Husna" />
