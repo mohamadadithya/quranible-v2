@@ -1,5 +1,5 @@
 <script>
-    export let title = 'Quranible',
+    export let title = 'Quranible | Al-Quran Digital Terlengkap dengan Latin dan Terjemahan Bahasa Indonesia',
     url = 'https://quranible.vercel.app',
     description = 'Quranible adalah situs Al-Quran lengkap dengan transliterasi dan terjemahan bahasa Indonesia.',
     image = '/favicon.png',
@@ -27,4 +27,12 @@
     <meta property="twitter:title" content={title}>
     <meta property="twitter:description" content={description}>
     <meta property="twitter:image" content={image}>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6TYYSP7NT"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W6TYYSP7NT');
+    </script>
 </svelte:head>
