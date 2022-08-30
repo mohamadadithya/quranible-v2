@@ -52,11 +52,11 @@
 	</div>
 	<h5 class="mb-4 text-xl font-medium">Tampilkan Ayat Latin</h5>
 	<div id="latin-radios">
-		<label for="yes" class="mr-3">
+		<label for="yes-transliteration" class="mr-3">
 			<input
 				type="radio"
 				name="transliteration"
-				id="yes"
+				id="yes-transliteration"
 				class="mr-1"
 				bind:group={transliterationValue}
 				value={1}
@@ -64,11 +64,11 @@
 			/>
 			Ya
 		</label>
-		<label for="no">
+		<label for="no-transliteration">
 			<input
 				type="radio"
 				name="transliteration"
-				id="no"
+				id="no-transliteration"
 				class="mr-1"
 				bind:group={transliterationValue}
 				value={0}
@@ -79,12 +79,12 @@
 	</div>
 	<h5 class="mb-4 text-xl font-medium mt-8">Otomatis Scroll Audio</h5>
 	<div id="auto-scroll-radios">
-		<label for="yes" class="mr-3">
-			<input type="radio" name="auto_scroll" id="yes" class="mr-1" bind:group={autoScrollValue} value={1} on:click={() => autoScrollChoice.set(1)} />
+		<label for="yes-auto-scroll" class="mr-3">
+			<input type="radio" name="auto_scroll" id="yes-auto-scroll" class="mr-1" bind:group={autoScrollValue} value={1} on:click={() => autoScrollChoice.set(1)} />
 			Ya
 		</label>
-		<label for="no">
-			<input type="radio" name="auto_scroll" id="no" class="mr-1" bind:group={autoScrollValue} value={0} on:click={() => autoScrollChoice.set(0)} />
+		<label for="no-auto-scroll">
+			<input type="radio" name="auto_scroll" id="no-auto-scroll" class="mr-1" bind:group={autoScrollValue} value={0} on:click={() => autoScrollChoice.set(0)} />
 			Tidak
 		</label>
 	</div>
