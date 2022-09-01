@@ -1,8 +1,13 @@
 <script>
+	import { loading } from './../stores/loadingStore.js';
 	import { themeChoice } from './../stores/SettingStore.js';
 	import '../app.css';
 	import '../fonts.css';
 	import Navbar from '../components/Navbar.svelte';
+	import Loader from '../components/Loader.svelte';
+	import { navigating } from '$app/stores';
+
+	$: $loading = !!$navigating;
 </script>
 
 <svelte:head>
@@ -26,6 +31,9 @@
 	>
 		<slot />
 	</div>
+	{#if $loading}
+		<Loader />
+	{/if}
 </main>
 
 <style>
