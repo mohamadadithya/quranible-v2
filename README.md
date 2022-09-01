@@ -28,6 +28,7 @@ npm run dev
   * Theme
   * Show/Hide Transliteration
   * Audio Auto Scroll
+- [ ] PWA
 
 ## Version History
 
