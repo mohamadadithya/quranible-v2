@@ -2,7 +2,13 @@
     "short_name": "Quranible",
     "name": "Quranible",
     "start_url": "/",
-    "icons": [],
+    "icons": [
+        {
+            "src": "favicon.png",
+            "type": "image/png",
+            "sizes": "480x480"
+          }
+    ],
     "background-color": "#F1F5F9",
     "display": "standalone",
     "scope": "/",
