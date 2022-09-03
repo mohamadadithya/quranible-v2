@@ -1,0 +1,11 @@
+{
+    "short_name": "Quranible",
+    "name": "Quranible",
+    "start_url": "/",
+    "icons": [],
+    "background-color": "#F1F5F9",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#1E293B",
+    "description": "Quranible adalah situs/aplikasi Al-Quran lengkap dengan transliterasi dan terjemahan bahasa Indonesia."
+}
