@@ -24,11 +24,11 @@ npm run dev
 ## Features
 - [x] Bookmark ayah
 - [x] Audio included
-- [ ] Settings
+- [x] Settings
   * Theme
   * Show/Hide Transliteration
   * Audio Auto Scroll
-- [ ] PWA
+- [x] PWA
 
 ## Version History
 
