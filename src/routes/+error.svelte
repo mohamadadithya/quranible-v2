@@ -6,7 +6,7 @@
 
 <Seo title="Error {error.status} | Quranible" />
 
-<section class="text-center">
+<section class="text-center min-h-screen">
         <div>
             <h1 class="text-3xl font-bold mb-3">Error {error.status}</h1>
             {#if error.status == 404 }
