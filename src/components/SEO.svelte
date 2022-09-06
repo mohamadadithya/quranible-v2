@@ -28,7 +28,7 @@
     <meta property="twitter:description" content={description}>
     <meta property="twitter:image" content={image}>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6TYYSP7NT"></script>
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-W6TYYSP7NT"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
