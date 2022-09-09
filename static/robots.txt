@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Disallow: 
+User-agent: googlebot-image
+Disallow: 
+User-agent: googlebot-mobile
+Disallow: 
+User-agent: MSNBot
+Disallow: 
+User-agent: Slurp
+Disallow: 
+User-agent: ia_archiver
+Disallow: 
+User-agent: yahoo-blogs/v3.9
+Disallow: 
+User-agent: *
+Disallow: 
+Sitemap: https://quranible-v2.vercel.app/sitemap.xml
