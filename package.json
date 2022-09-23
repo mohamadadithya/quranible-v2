@@ -26,6 +26,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-local-storage-store": "^0.3.1"
+		"@builder.io/partytown": "^0.7.0",
+		"svelte-local-storage-store": "^0.3.1",
+		"vite-plugin-commonjs": "^0.5.2"
 	}
 }
