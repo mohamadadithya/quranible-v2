@@ -6,7 +6,7 @@ Quranible is a complete Al-Quran website with transliteration and Indonesian tra
 
 ### Prequisites
 
-Node JS
+Node JS v16.14
 
 ### Installing
 
@@ -19,6 +19,11 @@ npm install
 * How to run the program
 ```
 npm run dev
+```
+
+* How to build
+```
+npm run build
 ```
 
 ## Features
