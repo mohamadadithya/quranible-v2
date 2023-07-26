@@ -28,11 +28,11 @@ npm run build
 
 ## Features
 - [x] Bookmark ayah
-- [x] Audio included
-- [x] Settings
+- [x] Play ayah audio
+- [x] App settings
   * Theme
-  * Show/Hide Transliteration
-  * Audio Auto Scroll
+  * Show/Hide transliteration
+  * Ayah audio auto scroll
 - [x] PWA
 
 ## Version History
