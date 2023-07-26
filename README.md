@@ -37,8 +37,11 @@ npm run build
 
 ## Version History
 
-* 0.1
+* 0.0.1
     * Initial Release
+* 0.0.2
+    * Add PWA feature
+    * Fix some bugs
 
 ## Resources
 * API: https://quranapi.idn.sch.id/
