@@ -2,7 +2,9 @@
 	import Heading from '$components/Heading.svelte';
 	import List from '$components/List.svelte';
 	import SEO from '$components/SEO.svelte';
+
 	export let data;
+
 	let intentions = data.intentions;
 </script>
 
