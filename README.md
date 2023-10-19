@@ -44,7 +44,7 @@ npm run build
     * Fix some bugs
 
 ## Resources
-* API: https://quranapi.idn.sch.id/
+* API: https://api.quran.gading.dev
 * Icons: https://fontawesome.com
 
 ## Tech Stacks

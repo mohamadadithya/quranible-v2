@@ -21,6 +21,14 @@
 			borderColor: 'border-slate-500'
 		}
 	];
+
+	const updateTheme = (event) => {
+		const inputEl = event.target;
+
+		if (inputEl.value) {
+			themeChoice.set(inputEl.value);
+		}
+	};
 </script>
 
 <Seo title="Pengaturan | Quranible" />
@@ -32,7 +40,6 @@
 		{#each themes as theme}
 			<label
 				for="{theme.value}-theme"
-				on:click={() => themeChoice.set(theme.value)}
 				class="flex items-center mb-4 md:mb-0 mr-3 {theme.value == themeValue
 					? 'bg-slate-300 dark:bg-slate-800'
 					: ''} px-4 py-2 rounded-3xl"
@@ -45,6 +52,7 @@
 					name="theme"
 					id="{theme.value}-theme"
 					value={theme.value}
+					on:change={updateTheme}
 					bind:group={themeValue}
 				/>
 			</label>

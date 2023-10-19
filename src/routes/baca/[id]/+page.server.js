@@ -1,9 +1,11 @@
+import { PUBLIC_API_URL } from '$env/static/public';
+
 export async function load({ params, fetch }) {
 	const surahId = params.id;
 
 	const getSurahs = async () => {
 		try {
-			const request = await fetch(`https://api.quran.gading.dev/surah`);
+			const request = await fetch(`${PUBLIC_API_URL}/surah`);
 			const response = await request.json();
 			const { code } = response;
 
@@ -18,7 +20,7 @@ export async function load({ params, fetch }) {
 
 	const getSurah = async () => {
 		try {
-			const request = await fetch(`https://api.quran.gading.dev/surah/${surahId}`);
+			const request = await fetch(`${PUBLIC_API_URL}/surah/${surahId}`);
 			const response = await request.json();
 			const { code } = response;
 
