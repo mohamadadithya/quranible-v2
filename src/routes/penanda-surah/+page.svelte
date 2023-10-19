@@ -1,8 +1,8 @@
 <script>
-	import Heading from '../../components/Heading.svelte';
-	import List from '../../components/List.svelte';
-	import Seo from '../../components/SEO.svelte';
-	import { ayahs } from './../../stores/surahStore.js';
+	import Heading from '$components/Heading.svelte';
+	import List from '$components/List.svelte';
+	import Seo from '$components/SEO.svelte';
+	import { ayahs } from '$stores/surahStore.js';
 
 	const filteredAyahs = $ayahs.filter((ayah) => Object.keys(ayah).length > 0).reverse();
 </script>

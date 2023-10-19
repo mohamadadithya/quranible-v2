@@ -1,6 +1,6 @@
 <script>
-	import List from './../../../components/List.svelte';
-	import Seo from '../../../components/SEO.svelte';
+	import List from '$components/List.svelte';
+	import Seo from '$components/SEO.svelte';
 
 	export let data;
 	let prayer = data.dailyPrayer;

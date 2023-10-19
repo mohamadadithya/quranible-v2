@@ -1,12 +1,16 @@
 <script>
-	import Heading from '../../components/Heading.svelte';
-	import List from '../../components/List.svelte';
-	import SEO from './../../components/SEO.svelte';
+	import Heading from '$components/Heading.svelte';
+	import List from '$components/List.svelte';
+	import SEO from '$components/SEO.svelte';
 	export let data;
 	let intentions = data.intentions;
 </script>
 
-<SEO title="Niat Sholat | Quranible" description="Kumpulan niat-niat sholat lengkap dengan arti" keywords="niat, niat-niat sholat, niat sholat" />
+<SEO
+	title="Niat Sholat | Quranible"
+	description="Kumpulan niat-niat sholat lengkap dengan arti"
+	keywords="niat, niat-niat sholat, niat sholat"
+/>
 
 <section>
 	<Heading title="Niat Sholat" />

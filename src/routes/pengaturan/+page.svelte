@@ -1,7 +1,7 @@
 <script>
-	import Heading from '../../components/Heading.svelte';
-	import Seo from '../../components/SEO.svelte';
-	import { themeChoice, transliterationChoice, autoScrollChoice } from '../../stores/SettingStore';
+	import Heading from '$components/Heading.svelte';
+	import Seo from '$components/SEO.svelte';
+	import { themeChoice, transliterationChoice, autoScrollChoice } from '$stores/SettingStore';
 
 	let themeValue = $themeChoice;
 	let transliterationValue = $transliterationChoice;
@@ -80,11 +80,27 @@
 	<h5 class="mb-4 text-xl font-medium mt-8">Otomatis Scroll Audio</h5>
 	<div id="auto-scroll-radios">
 		<label for="yes-auto-scroll" class="mr-3">
-			<input type="radio" name="auto_scroll" id="yes-auto-scroll" class="mr-1" bind:group={autoScrollValue} value={1} on:click={() => autoScrollChoice.set(1)} />
+			<input
+				type="radio"
+				name="auto_scroll"
+				id="yes-auto-scroll"
+				class="mr-1"
+				bind:group={autoScrollValue}
+				value={1}
+				on:click={() => autoScrollChoice.set(1)}
+			/>
 			Ya
 		</label>
 		<label for="no-auto-scroll">
-			<input type="radio" name="auto_scroll" id="no-auto-scroll" class="mr-1" bind:group={autoScrollValue} value={0} on:click={() => autoScrollChoice.set(0)} />
+			<input
+				type="radio"
+				name="auto_scroll"
+				id="no-auto-scroll"
+				class="mr-1"
+				bind:group={autoScrollValue}
+				value={0}
+				on:click={() => autoScrollChoice.set(0)}
+			/>
 			Tidak
 		</label>
 	</div>

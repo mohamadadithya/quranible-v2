@@ -1,32 +1,33 @@
 <script>
-	import NavList from './NavList.svelte';
+	import Icon from '@iconify/svelte';
+	import NavList from '$components/NavList.svelte';
 
 	let isOpen = false;
 	const links = [
 		{
 			url: '/',
 			name: 'Al-Quran',
-			icon: 'fa-book'
+			icon: 'ph:book'
 		},
 		{
 			url: '/doa-harian',
 			name: 'Doa Harian',
-			icon: 'fa-newspaper'
+			icon: 'ph:newspaper'
 		},
 		{
 			url: '/niat-sholat',
 			name: 'Niat Sholat',
-			icon: 'fa-pray'
+			icon: 'ph:hands-praying'
 		},
 		{
 			url: '/asmaul-husna',
 			name: 'Asmaul Husna',
-			icon: 'fa-signature'
+			icon: 'ph:signature'
 		},
 		{
 			url: '/tentang',
 			name: 'Tentang',
-			icon: 'fa-info-circle'
+			icon: 'ph:info'
 		}
 	];
 </script>
@@ -36,15 +37,15 @@
 >
 	<div class="px-5">
 		<ul class="flex justify-between items-center">
-			<li>
+			<li class="flex items-center gap-1">
 				<button
 					type="button"
-					class="text-xl mr-2"
+					class="mr-2"
 					aria-label="Menu"
 					title="Menu"
 					on:click={() => (isOpen = !isOpen)}
 				>
-					<i class="far fa-fw fa-bars" />
+					<Icon class="text-3xl" icon="ic:round-menu" />
 				</button>
 				<a
 					sveltekit:prefetch
@@ -54,7 +55,7 @@
 					class="text-2xl font-bold">Quranible</a
 				>
 			</li>
-			<li>
+			<li class="flex items-center gap-2">
 				<a
 					sveltekit:prefetch
 					href="/penanda-surah"
@@ -63,7 +64,7 @@
 					class="text-xl"
 					title="Penanda Surah"
 				>
-					<i class="far fa-fw fa-bookmark" />
+					<Icon class="text-3xl" icon="ph:bookmark-simple" />
 				</a>
 				<a
 					sveltekit:prefetch
@@ -73,7 +74,7 @@
 					class="text-xl"
 					title="Pengaturan"
 				>
-					<i class="far fa-fw fa-cog" />
+					<Icon class="text-3xl" icon="ep:setting" />
 				</a>
 			</li>
 		</ul>
@@ -97,9 +98,15 @@
 						/>
 					{/each}
 					<li class="border-b-2 border-slate-600 py-5">
-						<a href="https://saweria.co/mohamadadithya" target="_blank" title="Donasi"
-							><i class="far fa-fw fa-donate" /> Donasi</a
+						<a
+							class="flex items-center gap-2"
+							href="https://saweria.co/mohamadadithya"
+							target="_blank"
+							title="Donasi"
 						>
+							<Icon class="text-3xl" icon="bx:donate-heart" />
+							Donasi
+						</a>
 					</li>
 				</ul>
 			</div>

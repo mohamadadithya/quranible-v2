@@ -1,6 +1,6 @@
 <script>
-	import Heading from '../../components/Heading.svelte';
-	import Seo from '../../components/SEO.svelte';
+	import Heading from '$components/Heading.svelte';
+	import Seo from '$components/SEO.svelte';
 
 	export let data;
 	const goodNames = data.goodNames;

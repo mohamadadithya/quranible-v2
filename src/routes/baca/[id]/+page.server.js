@@ -1,12 +1,46 @@
-export async function load({params}) {
-    const surahId = params.id;
-    const [surah, surahs] = await Promise.all([
-        fetch(`https://quranapi.idn.sch.id/surah/${surahId}`).then(res => res.json()),
-        fetch(`https://quranapi.idn.sch.id/surah/`).then(res => res.json())
-    ]);
-    const nextNumber = parseInt(surahId) + 1;
-    const prevNumber = parseInt(surahId - 1);
-    const nextSurah = surahs.data.find(surah => surah.number == nextNumber);
-    const prevSurah = surahs.data.find(surah => surah.number == prevNumber);
-    return { surah, nextSurah, prevSurah }
+export async function load({ params, fetch }) {
+	const surahId = params.id;
+
+	const getSurahs = async () => {
+		try {
+			const request = await fetch(`https://api.quran.gading.dev/surah`);
+			const response = await request.json();
+			const { code } = response;
+
+			if (code === 200) {
+				const { data: surahs } = response;
+				return surahs;
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const getSurah = async () => {
+		try {
+			const request = await fetch(`https://api.quran.gading.dev/surah/${surahId}`);
+			const response = await request.json();
+			const { code } = response;
+
+			if (code === 200) {
+				const { data: surah } = response;
+				return surah;
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const surahs = await getSurahs();
+
+	const nextNumber = parseInt(surahId) + 1;
+	const prevNumber = parseInt(surahId - 1);
+	const nextSurah = surahs.find((surah) => surah.number == nextNumber);
+	const prevSurah = surahs.find((surah) => surah.number == prevNumber);
+
+	return {
+		surah: getSurah(),
+		nextSurah,
+		prevSurah
+	};
 }

@@ -15,9 +15,9 @@
 		{surah.number}
 	</p>
 	<div>
-		<p class="font-bold text-lg dark:text-slate-300">{surah.name}</p>
+		<p class="font-bold text-lg dark:text-slate-300">{surah.name.transliteration.id}</p>
 		<p class="text-xs text-gray-500 mt-1">
-			{surah.translationId} &bullet; {surah.numberOfAyahs} Ayat
+			{surah.name.translation.id} &bullet; {surah.numberOfVerses} Ayat
 		</p>
 	</div>
 </a>
