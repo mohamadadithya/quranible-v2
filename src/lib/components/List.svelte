@@ -3,7 +3,6 @@
 </script>
 
 <a
-	sveltekit:prefetch
 	href={url}
 	class="hover:bg-slate-200 hover:dark:bg-slate-800 py-4 border-b-2 border-gray-300 dark:border-slate-500 flex items-start dark:text-slate-300"
 >

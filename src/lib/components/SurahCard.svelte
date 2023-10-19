@@ -4,7 +4,6 @@
 </script>
 
 <a
-	sveltekit:prefetch
 	href="/baca/{surah.number}"
 	aria-label="Surah's Card"
 	class="bg-white dark:bg-slate-800 shadow-lg p-5 rounded-xl flex items-center {isHover

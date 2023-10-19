@@ -47,17 +47,10 @@
 				>
 					<Icon class="text-3xl" icon="ic:round-menu" />
 				</button>
-				<a
-					sveltekit:prefetch
-					href="/"
-					title="Quranible"
-					aria-label="Logo"
-					class="text-2xl font-bold">Quranible</a
-				>
+				<a href="/" title="Quranible" aria-label="Logo" class="text-2xl font-bold">Quranible</a>
 			</li>
 			<li class="flex items-center gap-2">
 				<a
-					sveltekit:prefetch
 					href="/penanda-surah"
 					role="button"
 					aria-label="Bookmarks"
@@ -67,7 +60,6 @@
 					<Icon class="text-3xl" icon="ph:bookmark-simple" />
 				</a>
 				<a
-					sveltekit:prefetch
 					href="/pengaturan"
 					role="button"
 					aria-label="Settings"
